@@ -1,0 +1,162 @@
+/* Paleta de Cores: */
+/* Roxo: #8A2BE2 (Blue Violet) ou #9370DB (Medium Purple) - escolhi #9370DB para um roxo mais suave */
+/* Preto: #000000 */
+/* Branco: #FFFFFF */
+
+body {
+    background-color: #000000; /* Fundo principal preto */
+    font-family: 'Caveat', cursive; /* Fonte cursiva para o corpo do texto */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: background-image 1s ease-in-out;
+    color: #FFFFFF; /* Cor do texto padrão do body para branco */
+    /* Para a imagem de fundo: opcionalmente, adicione um 'overlay' preto semi-transparente
+       para garantir que o texto branco se destaque nas imagens */
+    /* background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), var(--current-background-image); */
+}
+
+/* Estilo para o container principal */
+.container {
+    background-color: rgba(0, 0, 0, 0.7); /* Fundo preto semi-transparente para o container */
+    padding: 40px 60px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(147, 112, 219, 0.8); /* Sombra roxa para o container */
+    border: 2px solid #9370DB; /* Borda roxa para o container */
+}
+
+h1 {
+    font-family: 'Permanent Marker', cursive; /* Fonte estilo graffiti para o título */
+    color: #FFFFFF; /* Título branco */
+    font-size: 3.5rem; /* Aumenta um pouco o título */
+    text-shadow: 3px 3px #9370DB; /* Efeito de borda roxa para o título (simula graffiti) */
+    margin-bottom: 10px;
+}
+
+p {
+    font-family: 'Caveat', cursive; /* Fonte cursiva para o parágrafo */
+    color: #FFFFFF; /* Parágrafos brancos */
+    font-size: 1.5rem; /* Aumenta um pouco os parágrafos */
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+
+#contador {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.bloco {
+    background-color: #000000; /* Fundo preto para os blocos do contador */
+    color: #9370DB; /* Letras roxas para os blocos */
+    padding: 20px;
+    border-radius: 8px;
+    min-width: 100px;
+    border: 2px solid #9370DB; /* Borda roxa para os blocos */
+    box-shadow: 0 0 10px rgba(147, 112, 219, 0.6); /* Sombra roxa para os blocos */
+}
+
+span {
+    font-family: 'Permanent Marker', cursive; /* Fonte estilo graffiti para os números */
+    display: block;
+    font-size: 3rem; /* Aumenta o tamanho dos números */
+    font-weight: normal; /* A fonte Permanent Marker já tem um peso bom */
+    text-shadow: 2px 2px #FFFFFF; /* Borda branca para os números (contraste com o roxo) */
+}
+
+.mensagem {
+    font-family: 'Caveat', cursive; /* Fonte cursiva para a mensagem final */
+    color: #9370DB; /* Mensagem final roxa */
+    font-size: 2rem;
+    font-weight: bold;
+    text-shadow: 1px 1px #FFFFFF; /* Borda branca para a mensagem */
+}
+
+/* Estilo para o logo */
+.logo {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    /* Ajustando o brilho para combinar com a nova paleta de cores (roxo e branco) */
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.7); /* Sombra inicial branca */
+    animation: cintilar-roxo 2s infinite alternate; /* Nova animação de cintilação */
+    z-index: 10;
+}
+
+/* Definição da Animação de Cintilação com roxo */
+@keyframes cintilar-roxo {
+    0% {
+        box-shadow: 0 0 15px rgba(255, 255, 255, 0.7), /* Brilho branco */
+                    0 0 20px rgba(147, 112, 219, 0.4); /* Brilho roxo */
+    }
+    50% {
+        box-shadow: 0 0 25px rgba(255, 255, 255, 0.9), /* Brilho branco mais intenso */
+                    0 0 40px rgba(147, 112, 219, 0.7); /* Brilho roxo mais forte */
+    }
+    100% {
+        box-shadow: 0 0 15px rgba(255, 255, 255, 0.7),
+                    0 0 20px rgba(147, 112, 219, 0.4);
+    }
+}
+
+
+/* Opcional: Ajustar para telas menores */
+@media (max-width: 768px) {
+    .logo {
+        width: 100px;
+        height: 100px;
+        top: 10px;
+        right: 10px;
+    }
+
+    .container {
+        padding: 20px 30px;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+    p {
+        font-size: 1.2rem;
+    }
+    span {
+        font-size: 2.2rem;
+    }
+    .mensagem {
+        font-size: 1.5rem;
+    }
+}
+.frases-container {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7); /* Fundo preto semi-transparente */
+    border: 2px solid #9370DB; /* Borda roxa */
+    border-radius: 10px;
+    max-width: 600px;
+    text-align: center;
+}
+
+.frase-texto {
+    font-size: 1.5rem;
+    color: #FFFFFF; /* Texto da frase em branco */
+    margin-bottom: 10px;
+}
+
+.autor {
+    font-size: 1.2rem;
+    color: #9370DB; /* Nome do autor em roxo */
+    font-weight: bold;
+}
