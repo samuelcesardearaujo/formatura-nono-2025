@@ -1,52 +1,52 @@
 // --- Configuração da Formatura ---
-const dataFinal = new Date("Dec 13, 2025 18:00:00").getTime();
+const dataFinal = new Date("Dec 12, 2025 19:00:00").getTime();
 
 // --- Lista de Imagens de Fundo ---
-// Cada nome de arquivo deve estar em aspas simples e com a extensão '.jpg'.
+// O caminho agora inclui o nome do seu repositório: /formatura-nono-2025/
 const imagensFundo = [
-    'imagens/IMG_20250529_113300.jpg',
-    'imagens/IMG_20250529_113358.jpg',
-    'imagens/IMG_20250529_113400.jpg',
-    'imagens/IMG_20250529_113643.jpg',
-    'imagens/IMG_20250529_113704.jpg',
-    'imagens/IMG_20250529_113706.jpg',
-    'imagens/IMG_20250529_113820.jpg',
-    'imagens/IMG_20250529_113841.jpg',
-    'imagens/IMG_20250529_113842.jpg',
-    'imagens/IMG_20250529_113843_1.jpg',
-    'imagens/IMG_20250529_113859.jpg',
-    'imagens/IMG_20250529_113913.jpg',
-    'imagens/IMG_20250529_113914.jpg',
-    'imagens/IMG_20250529_113942.jpg',
-    'imagens/IMG_20250529_113947.jpg',
-    'imagens/IMG_20250529_113948.jpg',
-    'imagens/IMG_20250529_113949.jpg',
-    'imagens/IMG_20250529_113949_1.jpg',
-    'imagens/IMG_20250529_113950.jpg',
-    'imagens/IMG_20250529_113950_1.jpg',
-    'imagens/IMG_20250529_113950_2.jpg',
-    'imagens/IMG_20250529_114002.jpg',
-    'imagens/IMG_20250529_114003.jpg',
-    'imagens/IMG_20250529_114014.jpg',
-    'imagens/IMG_20250529_114016.jpg',
-    'imagens/IMG_20250529_114031.jpg',
-    'imagens/IMG_20250529_114032.jpg',
-    'imagens/IMG_20250529_114034.jpg',
-    'imagens/IMG_20250529_114036.jpg',
-    'imagens/IMG_20250614_101327.jpg',
-    'imagens/IMG_20250614_102302.jpg',
-    'imagens/IMG_20250614_102313.jpg',
-    'imagens/IMG_20250614_102317.jpg',
-    'imagens/IMG_20250614_102327.jpg',
-    'imagens/IMG_20250614_102348.jpg',
-    'imagens/IMG_20250614_102430.jpg',
-    'imagens/IMG_20250614_102608.jpg',
-    'imagens/IMG_20250614_181722.jpg',
-    'imagens/IMG_20250614_181725.jpg',
-    'imagens/IMG_20250614_181728.jpg',
-    'imagens/IMG_20250624_085735.jpg',
-    'imagens/IMG_20250624_085751.jpg',
-    'imagens/IMG_20250624_085757.jpg'
+    '/formatura-nono-2025/imagens/IMG_20250529_113300.jpg',
+    '/formatura-nono-2025/imagens/IMG_20250529_113358.jpg',
+    '/formatura-nono-2025/imagens/IMG_20250529_113400.jpg',
+    '/formatura-nono-2025/imagens/IMG_20250529_113643.jpg',
+    '/formatura-nono-2025/imagens/IMG_20250529_113704.jpg',
+    '/formatura-nono-2025/imagens/IMG_20250529_113706.jpg',
+    '/formatura-nono-2025/imagens/IMG_20250529_113820.jpg',
+    '/formatura-nono-2025/imagens/IMG_20250529_113841.jpg',
+    '/formatura-nono-2025/imagens/IMG_20250529_113842.jpg',
+    '/formatura-nono-2025/imagens/IMG_20250529_113843_1.jpg',
+    '/formatura-nono-2025/imagens/IMG_20250529_113859.jpg',
+    '/formatura-nono-2025/imagens/IMG_20250529_113913.jpg',
+    '/formatura-nono-2025/imagens/IMG_20250529_113914.jpg',
+    '/formatura-nono-2025/imagens/IMG_20250529_113942.jpg',
+    '/formatura-nono-2025/imagens/IMG_20250529_113947.jpg',
+    '/formatura-nono-2025/imagens/IMG_20250529_113948.jpg',
+    '/formatura-nono-2025/imagens/IMG_20250529_113949.jpg',
+    '/formatura-nono-2025/imagens/IMG_20250529_113949_1.jpg',
+    '/formatura-nono-2025/imagens/IMG_20250529_113950.jpg',
+    '/formatura-nono-2025/imagens/IMG_20250529_113950_1.jpg',
+    '/formatura-nono-2025/imagens/IMG_20250529_113950_2.jpg',
+    '/formatura-nono-2025/imagens/IMG_20250529_114002.jpg',
+    '/formatura-nono-2025/imagens/IMG_20250529_114003.jpg',
+    '/formatura-nono-2025/imagens/IMG_20250529_114014.jpg',
+    '/formatura-nono-2025/imagens/IMG_20250529_114016.jpg',
+    '/formatura-nono-2025/imagens/IMG_20250529_114031.jpg',
+    '/formatura-nono-2025/imagens/IMG_20250529_114032.jpg',
+    '/formatura-nono-2025/imagens/IMG_20250529_114034.jpg',
+    '/formatura-nono-2025/imagens/IMG_20250529_114036.jpg',
+    '/formatura-nono-2025/imagens/IMG_20250614_101327.jpg',
+    '/formatura-nono-2025/imagens/IMG_20250614_102302.jpg',
+    '/formatura-nono-2025/imagens/IMG_20250614_102313.jpg',
+    '/formatura-nono-2025/imagens/IMG_20250614_102317.jpg',
+    '/formatura-nono-2025/imagens/IMG_20250614_102327.jpg',
+    '/formatura-nono-2025/imagens/IMG_20250614_102348.jpg',
+    '/formatura-nono-2025/imagens/IMG_20250614_102430.jpg',
+    '/formatura-nono-2025/imagens/IMG_20250614_102608.jpg',
+    '/formatura-nono-2025/imagens/IMG_20250614_181722.jpg',
+    '/formatura-nono-2025/imagens/IMG_20250614_181725.jpg',
+    '/formatura-nono-2025/imagens/IMG_20250614_181728.jpg',
+    '/formatura-nono-2025/imagens/IMG_20250624_085735.jpg',
+    '/formatura-nono-2025/imagens/IMG_20250624_085751.jpg',
+    '/formatura-nono-2025/imagens/IMG_20250624_085757.jpg'
 ];
 
 // --- Função para definir a imagem de fundo do dia ---
@@ -56,62 +56,12 @@ function definirImagemDoDia() {
     const indiceImagem = diaDoAno % imagensFundo.length;
     document.body.style.backgroundImage = `url('${imagensFundo[indiceImagem]}')`;
 }
-// --- Lista de Frases de Despedida e Motivação ---
-const frases = [
-    {
-        texto: "Não chore porque terminou, sorria porque aconteceu.",
-        autor: "Gabriel García Márquez"
-    },
-    {
-        texto: "A despedida é uma dor tão suave que o homem a sente como um prazer.",
-        autor: "William Shakespeare"
-    },
-    {
-        texto: "Para viver e ser feliz, não se deve ter medo da mudança.",
-        autor: "Anatole France"
-    },
-    {
-        texto: "Não podemos mudar o que fomos, mas podemos mudar o que seremos.",
-        autor: "Osho"
-    },
-    {
-        texto: "O sucesso é a soma de pequenos esforços repetidos dia após dia.",
-        autor: "Robert Collier"
-    },
-    {
-        texto: "A melhor maneira de prever o futuro é criá-lo.",
-        autor: "Peter Drucker"
-    },
-    {
-        texto: "Um diploma é uma passagem para uma nova jornada.",
-        autor: "Frase motivacional"
-    },
-    {
-        texto: "Que o futuro seja um livro em branco esperando para ser preenchido com suas maiores conquistas.",
-        autor: "Frase motivacional"
-    },
-    {
-        texto: "Hoje vocês se despedem de uma fase, mas abraçam um mundo de possibilidades.",
-        autor: "Frase motivacional"
-    }
-];
-
-// --- Função para exibir uma frase aleatória ---
-function exibirFraseAleatoria() {
-    const indiceAleatorio = Math.floor(Math.random() * frases.length);
-    const fraseSelecionada = frases[indiceAleatorio];
-
-    document.getElementById("frase-texto").innerHTML = `"${fraseSelecionada.texto}"`;
-    document.getElementById("autor").innerHTML = `- ${fraseSelecionada.autor}`;
-}
 
 // Quando a página for carregada, chame a função para exibir a primeira frase.
 document.addEventListener("DOMContentLoaded", exibirFraseAleatoria);
 
 
-// --- Chamada inicial e atualização do contador ---
-definirImagemDoDia();
-
+// --- Atualiza o contador a cada 1 segundo ---
 const x = setInterval(function() {
     const agora = new Date().getTime();
     const diferenca = dataFinal - agora;
