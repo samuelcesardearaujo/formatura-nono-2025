@@ -12,11 +12,10 @@ body {
     min-height: 100vh;
     margin: 0;
     text-align: center;
-    /* Ajustes para a imagem de fundo */
-    background-size: cover; /* Garante que a imagem cubra toda a área */
-    background-position: center; /* Centraliza a imagem */
+    background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
-    background-attachment: fixed; /* Fixa a imagem no lugar enquanto a página rola */
+    background-attachment: fixed;
     transition: background-image 1s ease-in-out;
     color: #FFFFFF;
 }
@@ -57,7 +56,8 @@ p {
 }
 
 .bloco {
-    background-color: #000000;
+    /* CORRIGIDO: Cor de fundo agora é semitransparente (0.6) */
+    background-color: rgba(0, 0, 0, 0.6);
     color: #9370DB;
     padding: 20px;
     border-radius: 8px;
@@ -161,11 +161,11 @@ span {
     }
     
     #contador {
-        display: block; /* Empilha os blocos do contador */
+        display: block;
     }
     
     .bloco {
-        width: 100%; /* Cada bloco ocupa 100% da largura disponível */
+        width: 100%;
         margin-top: 10px;
     }
     
@@ -173,9 +173,8 @@ span {
         font-size: 2rem;
     }
 
-    /* Ajuste para a imagem de fundo no mobile */
     body {
-        background-size: contain; /* Ajusta a imagem para caber na tela sem cortes excessivos */
-        background-position: top center; /* Centraliza no topo para mostrar o principal */
+        background-size: contain;
+        background-position: top center;
     }
 }
