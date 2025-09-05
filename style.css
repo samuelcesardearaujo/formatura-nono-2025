@@ -12,7 +12,7 @@ body {
     min-height: 100vh;
     margin: 0;
     text-align: center;
-    background-size: cover; /* Mantemos 'cover' para a imagem preencher */
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -21,7 +21,7 @@ body {
 }
 
 .container {
-    background-color: rgba(0, 0, 0, 0.7); /* Transparência para o container principal */
+    background-color: rgba(0, 0, 0, 0.7);
     padding: 40px 60px;
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(147, 112, 219, 0.8);
@@ -53,17 +53,24 @@ p {
     justify-content: center;
     margin-top: 30px;
     margin-bottom: 20px;
+    /* Adicionada transparência de 50% ao contador inteiro */
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px 30px;
+    border-radius: 10px;
+    border: 2px solid #9370DB;
+    box-shadow: 0 0 10px rgba(147, 112, 219, 0.6);
 }
 
 .bloco {
-    background-color: rgba(0, 0, 0, 0.6); /* Transparência para os blocos do contador */
+    /* Removido o background e a borda para não sobrepor o container */
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
     color: #9370DB;
-    padding: 20px;
+    padding: 10px;
     border-radius: 8px;
-    min-width: 120px;
+    min-width: 80px;
     flex: 1;
-    border: 2px solid #9370DB;
-    box-shadow: 0 0 10px rgba(147, 112, 219, 0.6);
 }
 
 span {
@@ -85,7 +92,7 @@ span {
 .frases-container {
     margin-top: 40px;
     padding: 20px;
-    background-color: rgba(0, 0, 0, 0.7); /* Transparência para o container de frases */
+    background-color: rgba(0, 0, 0, 0.7);
     border: 2px solid #9370DB;
     border-radius: 10px;
     max-width: 600px;
@@ -161,21 +168,22 @@ span {
     
     #contador {
         display: block; /* Empilha os blocos do contador */
+        padding: 15px 10px;
     }
     
     .bloco {
         width: 100%; /* Cada bloco ocupa 100% da largura disponível */
         margin-top: 10px;
+        min-width: unset;
     }
     
     span {
         font-size: 2rem;
     }
 
-    /* Ajuste para a imagem de fundo no mobile */
     body {
-        background-size: cover; /* Volta para 'cover' para preencher */
-        background-position: center top; /* Foca mais no topo da imagem, que costuma ter o objeto principal */
-        padding-top: 100px; /* Adiciona um espaço no topo do body para o conteúdo não ficar por cima da imagem */
+        background-size: cover;
+        background-position: center top;
+        padding-top: 100px;
     }
 }
