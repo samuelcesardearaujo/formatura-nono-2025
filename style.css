@@ -12,7 +12,7 @@ body {
     min-height: 100vh;
     margin: 0;
     text-align: center;
-    background-size: cover;
+    background-size: cover; /* Mantemos 'cover' para a imagem preencher */
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -21,7 +21,7 @@ body {
 }
 
 .container {
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.7); /* Transparência para o container principal */
     padding: 40px 60px;
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(147, 112, 219, 0.8);
@@ -56,8 +56,7 @@ p {
 }
 
 .bloco {
-    /* CORRIGIDO: Cor de fundo agora é semitransparente (0.6) */
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.6); /* Transparência para os blocos do contador */
     color: #9370DB;
     padding: 20px;
     border-radius: 8px;
@@ -86,7 +85,7 @@ span {
 .frases-container {
     margin-top: 40px;
     padding: 20px;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.7); /* Transparência para o container de frases */
     border: 2px solid #9370DB;
     border-radius: 10px;
     max-width: 600px;
@@ -161,11 +160,11 @@ span {
     }
     
     #contador {
-        display: block;
+        display: block; /* Empilha os blocos do contador */
     }
     
     .bloco {
-        width: 100%;
+        width: 100%; /* Cada bloco ocupa 100% da largura disponível */
         margin-top: 10px;
     }
     
@@ -173,8 +172,10 @@ span {
         font-size: 2rem;
     }
 
+    /* Ajuste para a imagem de fundo no mobile */
     body {
-        background-size: contain;
-        background-position: top center;
+        background-size: cover; /* Volta para 'cover' para preencher */
+        background-position: center top; /* Foca mais no topo da imagem, que costuma ter o objeto principal */
+        padding-top: 100px; /* Adiciona um espaço no topo do body para o conteúdo não ficar por cima da imagem */
     }
 }
