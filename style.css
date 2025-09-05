@@ -1,7 +1,3 @@
-/*
-* O "box-sizing" garante que o padding não cause
-* o transbordamento dos elementos.
-*/
 * {
     box-sizing: border-box;
 }
@@ -56,8 +52,6 @@ p {
     justify-content: center;
     margin-top: 30px;
     margin-bottom: 20px;
-    /* Permite que os blocos quebrem a linha */
-    flex-wrap: wrap; 
 }
 
 .bloco {
@@ -65,9 +59,8 @@ p {
     color: #9370DB;
     padding: 20px;
     border-radius: 8px;
-    /* Largura flexível para se adaptar à tela */
-    flex: 1 1 200px; 
     min-width: 120px;
+    flex: 1;
     border: 2px solid #9370DB;
     box-shadow: 0 0 10px rgba(147, 112, 219, 0.6);
 }
@@ -140,7 +133,7 @@ span {
     }
 }
 
-/* Ajustes para telas de celular */
+/* --- VERSÃO MOBILE (a partir de 600px de largura) --- */
 @media (max-width: 600px) {
     .logo {
         width: 80px;
@@ -156,24 +149,26 @@ span {
     h1 {
         font-size: 2rem;
     }
+    
     p {
         font-size: 1rem;
     }
-    span {
-        font-size: 1.8rem;
-    }
+    
     .mensagem {
         font-size: 1.4rem;
     }
     
-    /* Faz os blocos do contador ocuparem quase metade da tela para quebrar a linha */
-    .bloco {
-        flex: 1 1 45%; 
-        min-width: unset;
+    /* Mudei o display para block para os blocos ficarem um embaixo do outro */
+    #contador {
+        display: block;
     }
     
-    /* Reduz o espaçamento entre os blocos */
-    #contador {
-        gap: 10px;
+    .bloco {
+        width: 100%;
+        margin-top: 10px;
+    }
+    
+    span {
+        font-size: 2rem;
     }
 }
