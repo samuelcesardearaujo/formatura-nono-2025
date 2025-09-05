@@ -2,7 +2,6 @@
 const dataFinal = new Date("Dec 12, 2025 19:00:00").getTime();
 
 // --- Lista de Imagens de Fundo ---
-// O caminho agora inclui o nome do seu repositório E a pasta com 'I' maiúsculo
 const imagensFundo = [
     '/formatura-nono-2025/Imagens/IMG_20250529_113300.jpg',
     '/formatura-nono-2025/Imagens/IMG_20250529_113358.jpg',
@@ -32,7 +31,6 @@ const imagensFundo = [
     '/formatura-nono-2025/Imagens/IMG_20250529_114031.jpg',
     '/formatura-nono-2025/Imagens/IMG_20250529_114032.jpg',
     '/formatura-nono-2025/Imagens/IMG_20250529_114034.jpg',
-    '/formatura-nono-2025/Imagens/IMG_20250529_114036.jpg',
     '/formatura-nono-2025/Imagens/IMG_20250614_101327.jpg',
     '/formatura-nono-2025/Imagens/IMG_20250614_102302.jpg',
     '/formatura-nono-2025/Imagens/IMG_20250614_102313.jpg',
@@ -49,6 +47,46 @@ const imagensFundo = [
     '/formatura-nono-2025/Imagens/IMG_20250624_085757.jpg'
 ];
 
+// --- Lista de Frases de Despedida e Motivação ---
+const frases = [
+    {
+        texto: "Não chore porque terminou, sorria porque aconteceu.",
+        autor: "Gabriel García Márquez"
+    },
+    {
+        texto: "A despedida é uma dor tão suave que o homem a sente como um prazer.",
+        autor: "William Shakespeare"
+    },
+    {
+        texto: "Para viver e ser feliz, não se deve ter medo da mudança.",
+        autor: "Anatole France"
+    },
+    {
+        texto: "Não podemos mudar o que fomos, mas podemos mudar o que seremos.",
+        autor: "Osho"
+    },
+    {
+        texto: "O sucesso é a soma de pequenos esforços repetidos dia após dia.",
+        autor: "Robert Collier"
+    },
+    {
+        texto: "A melhor maneira de prever o futuro é criá-lo.",
+        autor: "Peter Drucker"
+    },
+    {
+        texto: "Um diploma é uma passagem para uma nova jornada.",
+        autor: "Frase motivacional"
+    },
+    {
+        texto: "Que o futuro seja um livro em branco esperando para ser preenchido com suas maiores conquistas.",
+        autor: "Frase motivacional"
+    },
+    {
+        texto: "Hoje vocês se despedem de uma fase, mas abraçam um mundo de possibilidades.",
+        autor: "Frase motivacional"
+    }
+];
+
 // --- Função para definir a imagem de fundo do dia ---
 function definirImagemDoDia() {
     const hoje = new Date();
@@ -57,7 +95,17 @@ function definirImagemDoDia() {
     document.body.style.backgroundImage = `url('${imagensFundo[indiceImagem]}')`;
 }
 
-// Quando a página for carregada, chame a função para exibir a primeira frase.
+// --- Função para exibir uma frase aleatória ---
+function exibirFraseAleatoria() {
+    const indiceAleatorio = Math.floor(Math.random() * frases.length);
+    const fraseSelecionada = frases[indiceAleatorio];
+
+    document.getElementById("frase-texto").innerHTML = `"${fraseSelecionada.texto}"`;
+    document.getElementById("autor").innerHTML = `- ${fraseSelecionada.autor}`;
+}
+
+// Quando a página for carregada, chame a função para exibir a imagem e a frase.
+document.addEventListener("DOMContentLoaded", definirImagemDoDia);
 document.addEventListener("DOMContentLoaded", exibirFraseAleatoria);
 
 
