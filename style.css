@@ -12,9 +12,11 @@ body {
     min-height: 100vh;
     margin: 0;
     text-align: center;
-    background-size: cover;
-    background-position: center;
+    /* Ajustes para a imagem de fundo */
+    background-size: cover; /* Garante que a imagem cubra toda a área */
+    background-position: center; /* Centraliza a imagem */
     background-repeat: no-repeat;
+    background-attachment: fixed; /* Fixa a imagem no lugar enquanto a página rola */
     transition: background-image 1s ease-in-out;
     color: #FFFFFF;
 }
@@ -158,17 +160,22 @@ span {
         font-size: 1.4rem;
     }
     
-    /* Mudei o display para block para os blocos ficarem um embaixo do outro */
     #contador {
-        display: block;
+        display: block; /* Empilha os blocos do contador */
     }
     
     .bloco {
-        width: 100%;
+        width: 100%; /* Cada bloco ocupa 100% da largura disponível */
         margin-top: 10px;
     }
     
     span {
         font-size: 2rem;
+    }
+
+    /* Ajuste para a imagem de fundo no mobile */
+    body {
+        background-size: contain; /* Ajusta a imagem para caber na tela sem cortes excessivos */
+        background-position: top center; /* Centraliza no topo para mostrar o principal */
     }
 }
