@@ -53,7 +53,6 @@ p {
     justify-content: center;
     margin-top: 30px;
     margin-bottom: 20px;
-    /* Adicionada transparência de 50% ao contador inteiro */
     background-color: rgba(0, 0, 0, 0.5);
     padding: 20px 30px;
     border-radius: 10px;
@@ -62,7 +61,6 @@ p {
 }
 
 .bloco {
-    /* Removido o background e a borda para não sobrepor o container */
     background-color: transparent;
     border: none;
     box-shadow: none;
@@ -167,12 +165,12 @@ span {
     }
     
     #contador {
-        display: block; /* Empilha os blocos do contador */
+        display: block;
         padding: 15px 10px;
     }
     
     .bloco {
-        width: 100%; /* Cada bloco ocupa 100% da largura disponível */
+        width: 100%;
         margin-top: 10px;
         min-width: unset;
     }
@@ -182,8 +180,12 @@ span {
     }
 
     body {
-        background-size: cover;
-        background-position: center top;
+        /* A cor de fundo será mostrada nos espaços vazios */
+        background-color: #311A46; 
+        /* 'contain' garante que a imagem inteira seja visível */
+        background-size: contain;
+        /* Centraliza a imagem no meio da tela */
+        background-position: center; 
         padding-top: 100px;
     }
 }
