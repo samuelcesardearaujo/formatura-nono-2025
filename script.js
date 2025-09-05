@@ -104,9 +104,8 @@ function exibirFraseAleatoria() {
     document.getElementById("autor").innerHTML = `- ${fraseSelecionada.autor}`;
 }
 
-// Quando a página for carregada, chame a função para exibir a imagem e a frase.
-document.addEventListener("DOMContentLoaded", definirImagemDoDia);
-document.addEventListener("DOMContentLoaded", exibirFraseAleatoria);
+definirImagemDoDia();
+exibirFraseAleatoria();
 
 
 // --- Atualiza o contador a cada 1 segundo ---
