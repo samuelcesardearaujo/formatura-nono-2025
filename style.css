@@ -1,8 +1,16 @@
+/*
+* O "box-sizing" garante que o padding não cause
+* o transbordamento dos elementos.
+*/
+* {
+    box-sizing: border-box;
+}
+
 body {
     background-color: #000000;
     font-family: 'Caveat', cursive;
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* Organiza os elementos verticalmente */
     justify-content: center;
     align-items: center;
     min-height: 100vh;
@@ -22,6 +30,8 @@ body {
     box-shadow: 0 0 20px rgba(147, 112, 219, 0.8);
     border: 2px solid #9370DB;
     margin-top: 20px;
+    max-width: 800px; /* Limita a largura do container em telas grandes */
+    width: 90%; /* Garante que o container ocupe 90% da largura da tela */
 }
 
 h1 {
@@ -81,6 +91,7 @@ span {
     border: 2px solid #9370DB;
     border-radius: 10px;
     max-width: 600px;
+    width: 90%;
     text-align: center;
     margin-bottom: 20px;
 }
@@ -132,23 +143,23 @@ span {
         top: 10px;
         right: 10px;
     }
+    
     .container {
-        padding: 20px 30px;
+        padding: 20px;
     }
+
     h1 {
-        font-size: 2.5rem;
+        font-size: 2.2rem;
     }
     p {
         font-size: 1.2rem;
     }
     span {
-        font-size: 2.2rem;
+        font-size: 2rem;
     }
     .mensagem {
         font-size: 1.5rem;
     }
-    body {
-        justify-content: flex-start;
-        padding-top: 150px;
-    }
-}
+    
+    /* Ajustes específicos para telas muito pequenas */
+    .frases-
