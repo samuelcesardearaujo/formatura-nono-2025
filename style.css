@@ -1,133 +1,154 @@
-// --- Configuração da Formatura ---
-const dataFinal = new Date("Dec 12, 2025 19:00:00").getTime();
-
-// --- Lista de Imagens de Fundo ---
-const imagensFundo = [
-    '/formatura-nono-2025/Imagens/IMG_20250529_113300.jpg',
-    '/formatura-nono-2025/Imagens/IMG_20250529_113358.jpg',
-    '/formatura-nono-2025/Imagens/IMG_20250529_113400.jpg',
-    '/formatura-nono-2025/Imagens/IMG_20250529_113643.jpg',
-    '/formatura-nono-2025/Imagens/IMG_20250529_113704.jpg',
-    '/formatura-nono-2025/Imagens/IMG_20250529_113706.jpg',
-    '/formatura-nono-2025/Imagens/IMG_20250529_113820.jpg',
-    '/formatura-nono-2025/Imagens/IMG_20250529_113841.jpg',
-    '/formatura-nono-2025/Imagens/IMG_20250529_113842.jpg',
-    '/formatura-nono-2025/Imagens/IMG_20250529_113843_1.jpg',
-    '/formatura-nono-2025/Imagens/IMG_20250529_113859.jpg',
-    '/formatura-nono-2025/Imagens/IMG_20250529_113913.jpg',
-    '/formatura-nono-2025/Imagens/IMG_20250529_113914.jpg',
-    '/formatura-nono-2025/Imagens/IMG_20250529_113942.jpg',
-    '/formatura-nono-2025/Imagens/IMG_20250529_113947.jpg',
-    '/formatura-nono-2025/Imagens/IMG_20250529_113948.jpg',
-    '/formatura-nono-2025/Imagens/IMG_20250529_113949.jpg',
-    '/formatura-nono-2025/Imagens/IMG_20250529_113949_1.jpg',
-    '/formatura-nono-2025/Imagens/IMG_20250529_113950.jpg',
-    '/formatura-nono-2025/Imagens/IMG_20250529_113950_1.jpg',
-    '/formatura-nono-2025/Imagens/IMG_20250529_113950_2.jpg',
-    '/formatura-nono-2025/Imagens/IMG_20250529_114002.jpg',
-    '/formatura-nono-2025/Imagens/IMG_20250529_114003.jpg',
-    '/formatura-nono-2025/Imagens/IMG_20250529_114014.jpg',
-    '/formatura-nono-2025/Imagens/IMG_20250529_114016.jpg',
-    '/formatura-nono-2025/Imagens/IMG_20250529_114031.jpg',
-    '/formatura-nono-2025/Imagens/IMG_20250529_114032.jpg',
-    '/formatura-nono-2025/Imagens/IMG_20250529_114034.jpg',
-    '/formatura-nono-2025/Imagens/IMG_20250614_101327.jpg',
-    '/formatura-nono-2025/Imagens/IMG_20250614_102302.jpg',
-    '/formatura-nono-2025/Imagens/IMG_20250614_102313.jpg',
-    '/formatura-nono-2025/Imagens/IMG_20250614_102317.jpg',
-    '/formatura-nono-2025/Imagens/IMG_20250614_102327.jpg',
-    '/formatura-nono-2025/Imagens/IMG_20250614_102348.jpg',
-    '/formatura-nono-2025/Imagens/IMG_20250614_102430.jpg',
-    '/formatura-nono-2025/Imagens/IMG_20250614_102608.jpg',
-    '/formatura-nono-2025/Imagens/IMG_20250614_181722.jpg',
-    '/formatura-nono-2025/Imagens/IMG_20250614_181725.jpg',
-    '/formatura-nono-2025/Imagens/IMG_20250614_181728.jpg',
-    '/formatura-nono-2025/Imagens/IMG_20250624_085735.jpg',
-    '/formatura-nono-2025/Imagens/IMG_20250624_085751.jpg',
-    '/formatura-nono-2025/Imagens/IMG_20250624_085757.jpg'
-];
-
-// --- Lista de Frases de Despedida e Motivação ---
-const frases = [
-    {
-        texto: "Não chore porque terminou, sorria porque aconteceu.",
-        autor: "Gabriel García Márquez"
-    },
-    {
-        texto: "A despedida é uma dor tão suave que o homem a sente como um prazer.",
-        autor: "William Shakespeare"
-    },
-    {
-        texto: "Para viver e ser feliz, não se deve ter medo da mudança.",
-        autor: "Anatole France"
-    },
-    {
-        texto: "Não podemos mudar o que fomos, mas podemos mudar o que seremos.",
-        autor: "Osho"
-    },
-    {
-        texto: "O sucesso é a soma de pequenos esforços repetidos dia após dia.",
-        autor: "Robert Collier"
-    },
-    {
-        texto: "A melhor maneira de prever o futuro é criá-lo.",
-        autor: "Peter Drucker"
-    },
-    {
-        texto: "Um diploma é uma passagem para uma nova jornada.",
-        autor: "Frase motivacional"
-    },
-    {
-        texto: "Que o futuro seja um livro em branco esperando para ser preenchido com suas maiores conquistas.",
-        autor: "Frase motivacional"
-    },
-    {
-        texto: "Hoje vocês se despedem de uma fase, mas abraçam um mundo de possibilidades.",
-        autor: "Frase motivacional"
-    }
-];
-
-// --- Função para definir a imagem de fundo do dia ---
-function definirImagemDoDia() {
-    const hoje = new Date();
-    const diaDoAno = Math.floor((hoje - new Date(hoje.getFullYear(), 0, 0)) / (1000 * 60 * 60 * 24));
-    const indiceImagem = diaDoAno % imagensFundo.length;
-    document.body.style.backgroundImage = `url('${imagensFundo[indiceImagem]}')`;
+body {
+    background-color: #000000;
+    font-family: 'Caveat', cursive;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: background-image 1s ease-in-out;
+    color: #FFFFFF;
 }
 
-// --- Função para exibir uma frase aleatória ---
-function exibirFraseAleatoria() {
-    const indiceAleatorio = Math.floor(Math.random() * frases.length);
-    const fraseSelecionada = frases[indiceAleatorio];
-
-    document.getElementById("frase-texto").innerHTML = `"${fraseSelecionada.texto}"`;
-    document.getElementById("autor").innerHTML = `- ${fraseSelecionada.autor}`;
+.container {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 40px 60px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(147, 112, 219, 0.8);
+    border: 2px solid #9370DB;
+    margin-top: 20px;
 }
 
-// Quando a página for carregada, chame a função para exibir a imagem e a frase.
-document.addEventListener("DOMContentLoaded", definirImagemDoDia);
-document.addEventListener("DOMContentLoaded", exibirFraseAleatoria);
+h1 {
+    font-family: 'Permanent Marker', cursive;
+    color: #FFFFFF;
+    font-size: 3.5rem;
+    text-shadow: 3px 3px #9370DB;
+    margin-bottom: 10px;
+}
 
+p {
+    font-family: 'Caveat', cursive;
+    color: #FFFFFF;
+    font-size: 1.5rem;
+    margin-top: 0;
+    margin-bottom: 30px;
+}
 
-// --- Atualiza o contador a cada 1 segundo ---
-const x = setInterval(function() {
-    const agora = new Date().getTime();
-    const diferenca = dataFinal - agora;
-    const dias = Math.floor(diferenca / (1000 * 60 * 60 * 24));
-    const horas = Math.floor((diferenca % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const minutos = Math.floor((diferenca % (1000 * 60 * 60)) / (1000 * 60));
-    const segundos = Math.floor((diferenca % (1000 * 60)) / 1000);
+#contador {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
 
-    document.getElementById("dias").innerHTML = dias;
-    document.getElementById("horas").innerHTML = horas;
-    document.getElementById("minutos").innerHTML = minutos;
-    document.getElementById("segundos").innerHTML = segundos;
+.bloco {
+    background-color: #000000;
+    color: #9370DB;
+    padding: 20px;
+    border-radius: 8px;
+    min-width: 100px;
+    border: 2px solid #9370DB;
+    box-shadow: 0 0 10px rgba(147, 112, 219, 0.6);
+}
 
-    if (diferenca < 0) {
-        clearInterval(x);
-        document.getElementById("contador").style.display = "none";
-        document.getElementById("mensagem").innerHTML = "Parabéns, formandos! A espera acabou!";
-        document.body.style.backgroundImage = "none";
-        document.body.style.backgroundColor = "#3cb371";
+span {
+    font-family: 'Permanent Marker', cursive;
+    display: block;
+    font-size: 3rem;
+    font-weight: normal;
+    text-shadow: 2px 2px #FFFFFF;
+}
+
+.mensagem {
+    font-family: 'Caveat', cursive;
+    color: #9370DB;
+    font-size: 2rem;
+    font-weight: bold;
+    text-shadow: 1px 1px #FFFFFF;
+}
+
+.frases-container {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border: 2px solid #9370DB;
+    border-radius: 10px;
+    max-width: 600px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.frase-texto {
+    font-size: 1.5rem;
+    color: #FFFFFF;
+    margin-bottom: 10px;
+}
+
+.autor {
+    font-size: 1.2rem;
+    color: #9370DB;
+    font-weight: bold;
+}
+
+.logo {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.7);
+    animation: cintilar-roxo 2s infinite alternate;
+    z-index: 10;
+}
+
+@keyframes cintilar-roxo {
+    0% {
+        box-shadow: 0 0 15px rgba(255, 255, 255, 0.7),
+                    0 0 20px rgba(147, 112, 219, 0.4);
     }
-}, 1000);
+    50% {
+        box-shadow: 0 0 25px rgba(255, 255, 255, 0.9),
+                    0 0 40px rgba(147, 112, 219, 0.7);
+    }
+    100% {
+        box-shadow: 0 0 15px rgba(255, 255, 255, 0.7),
+                    0 0 20px rgba(147, 112, 219, 0.4);
+    }
+}
+
+@media (max-width: 768px) {
+    .logo {
+        width: 100px;
+        height: 100px;
+        top: 10px;
+        right: 10px;
+    }
+    .container {
+        padding: 20px 30px;
+    }
+    h1 {
+        font-size: 2.5rem;
+    }
+    p {
+        font-size: 1.2rem;
+    }
+    span {
+        font-size: 2.2rem;
+    }
+    .mensagem {
+        font-size: 1.5rem;
+    }
+    body {
+        justify-content: flex-start;
+        padding-top: 150px;
+    }
+}
