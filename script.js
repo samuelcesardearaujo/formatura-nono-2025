@@ -200,8 +200,6 @@ function trocarFotoFundo() {
     document.getElementById("background-overlay").style.backgroundImage = `url('${fotoAleatoria}')`;
 }
 
-// Quando a página é carregada, executa as duas funções
-window.onload = function() {
-    exibirFraseAleatoria();
-    trocarFotoFundo();
-};
+// Chame as funções diretamente para garantir que o conteúdo seja carregado
+exibirFraseAleatoria();
+trocarFotoFundo();
