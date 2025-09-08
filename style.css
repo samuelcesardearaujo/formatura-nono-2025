@@ -21,7 +21,7 @@ body {
 }
 
 .container {
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0.7);
     padding: 40px 60px;
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(147, 112, 219, 0.8);
@@ -53,7 +53,7 @@ p {
     justify-content: center;
     margin-top: 30px;
     margin-bottom: 20px;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.5);
     padding: 20px 30px;
     border-radius: 10px;
     border: 2px solid #9370DB;
@@ -139,6 +139,23 @@ span {
     }
 }
 
+/* Torna o container da playlist responsivo */
+.playlist-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    overflow: hidden;
+    margin-bottom: 20px; /* Adiciona um espaço abaixo da playlist */
+}
+
+.playlist-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
 /* --- VERSÃO MOBILE (a partir de 600px de largura) --- */
 @media (max-width: 600px) {
     .logo {
@@ -165,12 +182,12 @@ span {
     }
     
     #contador {
-        display: block;
+        display: block; /* Empilha os blocos do contador */
         padding: 15px 10px;
     }
     
     .bloco {
-        width: 100%;
+        width: 100%; /* Cada bloco ocupa 100% da largura disponível */
         margin-top: 10px;
         min-width: unset;
     }
@@ -180,13 +197,9 @@ span {
     }
 
     body {
-        /* A cor de fundo será mostrada nos espaços vazios */
         background-color: #311A46; 
-        /* 'contain' garante que a imagem inteira seja visível */
         background-size: contain;
-        /* Centraliza a imagem no meio da tela */
         background-position: center; 
         padding-top: 100px;
     }
-
 }
