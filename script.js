@@ -18,14 +18,13 @@ const x = setInterval(function() {
     document.getElementById("minutos").innerHTML = minutos;
     document.getElementById("segundos").innerHTML = segundos;
 
-      // Se o contador chegar a zero
+    // Se o contador chegar a zero
     if (distancia < 0) {
         clearInterval(x);
         document.getElementById("contador").style.display = "none";
         document.getElementById("mensagem").innerHTML = "É HOJE! A FORMATURA CHEGOU!";
         // Altera a imagem de fundo para a imagem final da formatura
-        document.body.style.backgroundImage = 'url("./Imagens/final.jpg")';
-    }
+        document.getElementById("background-overlay").style.backgroundImage = 'url("./Imagens/final.jpg")';
     }
 }, 1000);
 
@@ -97,9 +96,6 @@ function exibirFraseAleatoria() {
     document.getElementById("frase-texto").innerHTML = `"${frase.texto}"`;
     document.getElementById("autor").innerHTML = `- ${frase.autor}`;
 }
-
-// Chama a função quando a página é carregada
-window.onload = exibirFraseAleatoria;
 
 // --- CÓDIGO PARA FOTOS DE FUNDO ALEATÓRIAS ---
 const fotosFundo = [
@@ -201,7 +197,7 @@ const fotosFundo = [
 // Função para escolher e aplicar uma foto de fundo aleatória
 function trocarFotoFundo() {
     const fotoAleatoria = fotosFundo[Math.floor(Math.random() * fotosFundo.length)];
-    document.body.style.backgroundImage = `url('${fotoAleatoria}')`;
+    document.getElementById("background-overlay").style.backgroundImage = `url('${fotoAleatoria}')`;
 }
 
 // Quando a página é carregada, executa as duas funções
@@ -209,5 +205,3 @@ window.onload = function() {
     exibirFraseAleatoria();
     trocarFotoFundo();
 };
-
-
