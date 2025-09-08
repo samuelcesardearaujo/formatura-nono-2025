@@ -12,6 +12,7 @@ body {
     min-height: 100vh;
     margin: 0;
     text-align: center;
+    /* Ajuste para computador */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -196,9 +197,13 @@ span {
         font-size: 2rem;
     }
 
+    /* Ajuste para a imagem de fundo no mobile */
     body {
+        /* A cor de fundo será mostrada nos espaços vazios */
         background-color: #311A46; 
+        /* 'contain' garante que a imagem inteira seja visível */
         background-size: contain;
+        /* Centraliza a imagem no meio da tela */
         background-position: center; 
         padding-top: 100px;
     }
