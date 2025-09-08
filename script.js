@@ -18,11 +18,14 @@ const x = setInterval(function() {
     document.getElementById("minutos").innerHTML = minutos;
     document.getElementById("segundos").innerHTML = segundos;
 
-    // Se o contador chegar a zero
+      // Se o contador chegar a zero
     if (distancia < 0) {
         clearInterval(x);
         document.getElementById("contador").style.display = "none";
         document.getElementById("mensagem").innerHTML = "É HOJE! A FORMATURA CHEGOU!";
+        // Altera a imagem de fundo para a imagem final da formatura
+        document.body.style.backgroundImage = 'url("./Imagens/final.jpg")';
+    }
     }
 }, 1000);
 
@@ -206,4 +209,5 @@ window.onload = function() {
     exibirFraseAleatoria();
     trocarFotoFundo();
 };
+
 
