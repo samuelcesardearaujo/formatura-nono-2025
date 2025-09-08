@@ -22,10 +22,10 @@ body {
 }
 
 .container {
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.4);
     padding: 40px 60px;
     border-radius: 10px;
-    box-shadow: 0 0 20px rgba(147, 112, 219, 0.8);
+    box-shadow: 0 0 20px rgba(147, 112, 219, 0.4);
     border: 2px solid #9370DB;
     margin-top: 20px;
     max-width: 800px;
@@ -54,7 +54,7 @@ p {
     justify-content: center;
     margin-top: 30px;
     margin-bottom: 20px;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.3);
     padding: 20px 30px;
     border-radius: 10px;
     border: 2px solid #9370DB;
@@ -91,7 +91,7 @@ span {
 .frases-container {
     margin-top: 40px;
     padding: 20px;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.4);
     border: 2px solid #9370DB;
     border-radius: 10px;
     max-width: 600px;
@@ -208,3 +208,4 @@ span {
         padding-top: 100px;
     }
 }
+
