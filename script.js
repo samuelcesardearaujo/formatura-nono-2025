@@ -1,6 +1,6 @@
 // --- CÓDIGO DO CONTADOR ---
 // Data do evento
-const dataEvento = new Date("November 20, 2025 23:59:59").getTime();
+const dataEvento = new Date("December 12, 2025 23:59:59").getTime();
 
 // Atualiza o contador a cada segundo
 const x = setInterval(function() {
@@ -174,3 +174,4 @@ window.onload = function() {
     exibirFraseAleatoria();
     trocarFotoFundo();
 };
+
