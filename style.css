@@ -21,18 +21,16 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -1; /* Fica atrás de todo o conteúdo */
+    z-index: -1;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
     transition: background-image 1s ease-in-out;
-    /* Efeito de borda cintilante */
     box-shadow: 0 0 20px 20px #9370DB inset, 0 0 40px 40px #9370DB inset;
     animation: cintilar-roxo-borda 2s infinite alternate;
 }
 
-/* Criando uma nova animação com o efeito de borda cintilante */
 @keyframes cintilar-roxo-borda {
     0% {
         box-shadow: 0 0 20px 20px rgba(147, 112, 219, 0.4) inset, 0 0 40px 40px rgba(147, 112, 219, 0.2) inset;
@@ -164,13 +162,12 @@ span {
     }
 }
 
-/* Torna o container da playlist responsivo */
 .playlist-container {
     position: relative;
     width: 100%;
-    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    padding-bottom: 56.25%;
     overflow: hidden;
-    margin-bottom: 20px; /* Adiciona um espaço abaixo da playlist */
+    margin-bottom: 20px;
 }
 
 .playlist-container iframe {
@@ -181,7 +178,6 @@ span {
     height: 100%;
 }
 
-/* --- VERSÃO MOBILE (a partir de 600px de largura) --- */
 @media (max-width: 600px) {
     .logo {
         width: 80px;
@@ -207,12 +203,12 @@ span {
     }
     
     #contador {
-        display: block; /* Empilha os blocos do contador */
+        display: block;
         padding: 15px 10px;
     }
     
     .bloco {
-        width: 100%; /* Cada bloco ocupa 100% da largura disponível */
+        width: 100%;
         margin-top: 10px;
         min-width: unset;
     }
@@ -221,7 +217,6 @@ span {
         font-size: 2rem;
     }
 
-    /* Ajuste para a imagem de fundo no mobile */
     #background-overlay {
         background-color: #311A46; 
         background-size: contain;
