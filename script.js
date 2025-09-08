@@ -52,6 +52,38 @@ const frases = [
     {
         texto: "Comece onde você está. Use o que você tem. Faça o que você pode.",
         autor: "Arthur Ashe"
+    },
+    {
+        texto: "A educação é a arma mais poderosa que você pode usar para mudar o mundo.",
+        autor: "Nelson Mandela"
+    },
+    {
+        texto: "O sucesso é a soma de pequenos esforços, repetidos dia após dia.",
+        autor: "Robert Collier"
+    },
+    {
+        texto: "Suba o primeiro degrau com fé. Não é necessário que você veja toda a escada. Apenas dê o primeiro passo.",
+        autor: "Martin Luther King Jr."
+    },
+    {
+        texto: "Nossa maior fraqueza está em desistir. O caminho mais certo de vencer é tentar mais uma vez.",
+        autor: "Thomas Edison"
+    },
+    {
+        texto: "O sucesso não é o segredo da felicidade. A felicidade é o segredo do sucesso.",
+        autor: "Albert Schweitzer"
+    },
+    {
+        texto: "Se você pode sonhar, você pode fazer.",
+        autor: "Walt Disney"
+    },
+    {
+        texto: "Aprender é a única coisa que a mente nunca se cansa, nunca tem medo e nunca se arrepende.",
+        autor: "Leonardo da Vinci"
+    },
+    {
+        texto: "A jornada de mil milhas começa com um simples passo.",
+        autor: "Lao Tzu"
     }
 ];
 
@@ -174,3 +206,4 @@ window.onload = function() {
     exibirFraseAleatoria();
     trocarFotoFundo();
 };
+
