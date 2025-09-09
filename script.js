@@ -192,6 +192,7 @@ const fotosFundo = [
     './Imagens/IMG_20241010_095805.jpg',
     './Imagens/489786613_1212850427514661_2066828804083594533_n.jpg',
     './Imagens/IMG_20250310_080912.jpg',
+    './Imagens/WhatsApp Image 2025-09-05 at 09.07.57',
 ];
 
 // Função para escolher e aplicar uma foto de fundo aleatória
@@ -203,3 +204,4 @@ function trocarFotoFundo() {
 // Chame as funções diretamente para garantir que o conteúdo seja carregado
 exibirFraseAleatoria();
 trocarFotoFundo();
+
