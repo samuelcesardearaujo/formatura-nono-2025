@@ -5,17 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contagem Regressiva para a Formatura!</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="/Imagens/favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Permanent+Marker&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <img src="/formatura-nono-2025/Imagens/logo-formatura.jpeg" alt="Logo Nono Ano Formatura 2025" class="logo">
+    <div id="background-overlay"></div>
+
+    <img src="./Imagens/logo-formatura.jpeg" alt="Logo Nono Ano Formatura 2025" class="logo">
 
     <div class="container">
         <h1>Contagem Regressiva para a Formatura!</h1>
-        <p>Alunos do Nono Ano</p>
+        <p>Memórias do Nono 2025</p>
         <div id="contador">
             <div class="bloco"><span id="dias"></span> dias</div>
             <div class="bloco"><span id="horas"></span> horas</div>
@@ -25,26 +28,18 @@
         <p class="mensagem" id="mensagem"></p>
     </div>
 
-<div class="frases-container" id="frases-container">
-    <div class="playlist-container">  
-    </div>
+    <div class="frases-container" id="frases-container">
     <p class="frase-texto" id="frase-texto"></p>
     <p class="autor" id="autor"></p>
-    <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/02WuZN1wcGraQIMVkV4zLA?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    <div class="playlist-container">
+        <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/02WuZN1wcGraQIMVkV4zLA?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>    
+    </div>
 </div>
 
-
     <script src="script.js"></script>
+
 </body>
-
 </html>
-
-
-
-
-
-
-
 
 
 

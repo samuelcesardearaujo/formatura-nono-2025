@@ -12,16 +12,39 @@ body {
     min-height: 100vh;
     margin: 0;
     text-align: center;
+    color: #FFFFFF;
+}
+
+#background-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
     transition: background-image 1s ease-in-out;
-    color: #FFFFFF;
+    box-shadow: 0 0 20px 20px #9370DB inset, 0 0 40px 40px #9370DB inset;
+    animation: cintilar-roxo-borda 2s infinite alternate;
+}
+
+@keyframes cintilar-roxo-borda {
+    0% {
+        box-shadow: 0 0 20px 20px rgba(147, 112, 219, 0.4) inset, 0 0 40px 40px rgba(147, 112, 219, 0.2) inset;
+    }
+    50% {
+        box-shadow: 0 0 40px 40px rgba(147, 112, 219, 0.8) inset, 0 0 60px 60px rgba(147, 112, 219, 0.5) inset;
+    }
+    100% {
+        box-shadow: 0 0 20px 20px rgba(147, 112, 219, 0.4) inset, 0 0 40px 40px rgba(147, 112, 219, 0.2) inset;
+    }
 }
 
 .container {
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0.7);
     padding: 40px 60px;
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(147, 112, 219, 0.8);
@@ -53,7 +76,7 @@ p {
     justify-content: center;
     margin-top: 30px;
     margin-bottom: 20px;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.5);
     padding: 20px 30px;
     border-radius: 10px;
     border: 2px solid #9370DB;
@@ -139,7 +162,22 @@ span {
     }
 }
 
-/* --- VERSÃO MOBILE (a partir de 600px de largura) --- */
+.playlist-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.playlist-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
 @media (max-width: 600px) {
     .logo {
         width: 80px;
@@ -179,14 +217,10 @@ span {
         font-size: 2rem;
     }
 
-    body {
-        /* A cor de fundo será mostrada nos espaços vazios */
+    #background-overlay {
         background-color: #311A46; 
-        /* 'contain' garante que a imagem inteira seja visível */
         background-size: contain;
-        /* Centraliza a imagem no meio da tela */
         background-position: center; 
         padding-top: 100px;
     }
-
 }
